@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Garage Spiders</title>
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #111;
+      color: #eee;
+      transition: all 0.4s ease;
+    }
+
+    a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid #444;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    nav a {
+      color: #ccc;
+      margin-left: 1.5rem;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #1a1a1a;
+      border-radius: 10px;
+      border: 1px solid #333;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .container h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .container p {
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 6px;
+      border: 2px solid #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      background-color: #000;
+      color: #777;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* TOGGLE BUTTON */
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #222;
+      color: #fff;
+      border: 2px solid #555;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      z-index: 10000;
+      transition: all 0.3s ease;
+    }
+    .toggle-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* BLACKLIGHT MODE */
+    body.blacklight {
+      background: #000011;
+      color: #f0f0f0;
+    }
+
+    body.blacklight .container {
+      background: rgba(0, 0, 40, 0.9);
+      border: 1px solid #5511ff;
+      box-shadow: 0 0 30px #aa00ff;
+    }
+
+    body.blacklight h1 {
+      color: #ff66ff;
+      text-shadow: 0 0 20px #ff00ff;
+    }
+
+    body.blacklight a {
+      color: #00f6ff;
+    }
+
+    body.blacklight .about-img {
+      filter: hue-rotate(180deg) saturate(2);
+    }
+
+    body.blacklight footer {
+      color: #8888ff;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleBlacklight()">🕶 Blacklight</button>
+
+  <header>
+    <img src="logo.png" alt="Garage Spiders Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>About Garage Spiders</h1>
+    <p>
+      Born in a cluttered garage under buzzing fluorescent lights, Garage Spiders is a mutant collision of JDM inspired baits, rad collectables, and a gnarly fishing obsession. We’re a rogue tackle syndicate powered by tight lines, spooled reels, and radioactive bait juice. Every lure, every pin, every creature is engineered to confuse the masses and excite the real weirdos.
+    </p>
+    <p>
+      Whether you're hopping fences, creeping banks for bass, or chasing ghosts in a tackle shop, Garage Spiders is your secret signal. Join the cult. Cast the chaos. <strong>Spin to win.</strong>
+    </p>
+    <img src="garage-spiders-about-2.png" alt="Garage Spiders Creatures" class="about-img" />
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Garage Spiders. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleBlacklight() {
+      document.body.classList.toggle('blacklight');
+    }
+  </script>
+
+</body>
+</html>
